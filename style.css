@@ -778,3 +778,9 @@ main{
 .problemas .conte .cont-box{
   width: 25%;
 }
+@media(max-width: 789px){
+  .problemas .conte .cont-box{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
