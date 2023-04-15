@@ -722,11 +722,8 @@ main{
   padding: 30px;
   text-align: center;  
   position: relative;
-  height: 400px;
 }
-.inner-2{
-  height: 300px !important;
-}
+
 .services .conte .cont-box .inner::before{
   content: '';
   position: absolute;
