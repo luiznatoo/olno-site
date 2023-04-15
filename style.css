@@ -35,14 +35,7 @@ body{
   }
 }
 
-.logo{
-  max-width: 250px;
-  height: auto;
-}
-.logo img{
-  max-width: 100%;
-  height: auto;
-}
+
 .container{
   max-width: 1150px;
   margin: 0 auto;
@@ -63,6 +56,7 @@ body{
   transition: 500ms;
 
 }
+
 .button:hover{
   background-image: linear-gradient(to left, rgba(212, 175, 55, 0.75),  #aa9038,  #967b22, rgba(212, 175, 55, 0.75));
   background-size: 500% 100%;
@@ -78,7 +72,7 @@ main{
   min-height: 100vh;
   position: relative;
 }
-.fundo-header{
+/*.fundo-header{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -91,13 +85,21 @@ main{
   object-fit: cover;
   object-position: center;
   mix-blend-mode: lighten;
-}
+}*/
 .headline{
   padding: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+.logo{
+  max-width: 300px;
+  height: auto;
+}
+.logo img{
+  max-width: 100%;
+  height: auto;
 }
 .headline h1{
   max-width: 1150px;
@@ -113,6 +115,10 @@ main{
   font-family: var(--font-terce);
   font-size: 1.125em;
   color: var(--cor-font-70);
+  line-height: 20px;
+}
+.headline .logo{
+
 }
 .headline p::before{
   content: '';
@@ -126,12 +132,15 @@ main{
 /* responsividade */
 @media (max-width: 789px){
   .headline h1{
-    font-size: 2em;
+    font-size: 1.7em;
+    max-width: 300px;
+    line-height: 40px;
 
   }
   .headline p{
     max-width: 300px;
     text-align: center;
+    font-size: 1em;
   }
 }
 
@@ -219,21 +228,26 @@ main{
     max-width: 300px;
   }
   .box .box-card h2{
-    font-size: 2em;
+    font-size: 1.4em;
   }
   .box .box-card h3{
-    font-size: 1.5em;
+    font-size: 1.3em;
+  }
+  .box .box-card p{
+    font-size: 1em;
   }
   .box .box-conteudo{
     justify-content: center;
+    max-width: 300px;
   }
   .box .box-conteudo h2{
     text-align: start;
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   .box .box-conteudo p{
     max-width: 300px;
     text-align: start;
+    font-size: 1em;
   }
   
 }
@@ -301,15 +315,17 @@ main{
     align-items: flex-start;
   }
   .chamada-conteudo h2{
-    font-size: 1.5em;
+    font-size: 1.4em;
     text-align: start;
   }
   .chamada-conteudo p{
     text-align: start;
     max-width: 300px;
+    font-size: 1em;
   }
   .chamada .chamada-conteudo h2{
     max-width: 300px;
+    font-size: 1.4em;
   }
 }
 
@@ -421,11 +437,18 @@ main{
     color: var(--cor-font-70);
     max-width: 80%;
     text-align: center;
+    font-size: 1.125em;
+    font-family: var(--font-terce);
   }
   .slide span{
     color: var(--cor-font-10);
     text-align: center;
+    font-family: var(--font-secund);
+    font-size: 1.2em;
 
+  }
+  .btn-clients{
+    margin-top: 50px;
   }
 
 
@@ -457,8 +480,14 @@ main{
     max-width: 300px;
   }
   .clients h2{
-    font-size: 1.5em;
+    font-size: 1.4em;
     max-width: 300px;
+  }
+  .slide p{
+    font-size: 1em;
+  }
+  .slide span{
+    font-size: 1.1em
   }
 }
 /* QUEBRA DE OBJEÇÃO */
@@ -515,6 +544,7 @@ main{
     margin-top: 30px;
     font-size: 1.125em;
     text-align: center;
+    line-height: 30px;
     font-family: var(--font-terce);
   }
 .faq{
@@ -544,8 +574,9 @@ main{
   font-weight: 500;
   cursor: pointer;
   color: var(--cor-font-70);
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-family: var(--font-secund);
+  line-height: 30px;
 
 }
 .accordion label::before{
@@ -579,15 +610,16 @@ main{
   content: "-";
 }
 /* responsividade */
-@media (max-width: 500px){
+@media (max-width: 789px){
   .accordion{
     max-width: 300px;
   }
   .faq-headline h2{
-    font-size: 4em;
+    font-size: 3em;
   }
-  .faq.headline h3{
-    font-size: 1.5em;
+  .faq-headline h3{
+    font-size: 1.2em;
+    
   }
   .faq-headline p{
     max-width: 300px;
@@ -634,6 +666,7 @@ main{
     margin-top: 2rem;
     font-family: var(--font-terce);
     color: var(--cor-font-20);
+    line-height: 30px
   }
   .row{
     display: flex;
@@ -683,11 +716,16 @@ main{
 .services .conte .cont-box{
   width: 33.33%;
   padding: 15px;
+  transition: 500ms;
 }
 .services .conte .cont-box .inner{
   padding: 30px;
   text-align: center;  
   position: relative;
+  height: 400px;
+}
+.inner-2{
+  height: 300px !important;
 }
 .services .conte .cont-box .inner::before{
   content: '';
@@ -714,9 +752,8 @@ main{
   border-right: 3px solid transparent;
   transition: all .8s ease ;
   animation: our-services 5s infinite alternate;
-
 }
-/* 
+ /*
 .services .conte .cont-box:hover .inner::after{
   border-color: var(--cor-10);
   width: 100%;
@@ -744,21 +781,26 @@ main{
     
   }
 }
-.services .conte .cont-box:hover .inne lord-icon{
+.services .conte .cont-box:hover{
+  transform: translateY(-20px);
+  transition: 500ms;
 
 }
+
 
 .services .conte .cont-box .inner lord-icon{
   
 }
 .services .conte .cont-box .inner  h3{
-  font-size: 20px;
+  font-size: 1.5em;
+  font-family: var(--font-secund);
   font-weight: normal;
   color: var(--cor-font-70);
   margin: 20px 0;
 }
 .services .conte .cont-box .inner p{
-  font-size: 16px;
+  font-size: 1.125em;
+  font-family: var(--font-terce);
   color: var(--cor-font-20);
   line-height: 24px;
 
@@ -767,6 +809,12 @@ main{
   .services .conte .cont-box{
     width: 80%;
     margin: 0 auto;
+  }
+  .services .heading h2{
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.4em;
   }
 }
 .etapas{
