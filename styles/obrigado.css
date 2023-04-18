@@ -77,6 +77,15 @@ main{
   font-family: var(--font-principal);
   font-weight: 100;
 }
+.logo{
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.logo img{
+  max-width: 100%;
+  height: auto;
+}
 footer{
   padding: 20px;
 

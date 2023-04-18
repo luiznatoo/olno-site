@@ -10,7 +10,7 @@
   --font-principal: 'Montserrat', sans-serif;
   --font-secund: 'Roboto', sans-serif;
   --font-terce: 'Raleway', sans-serif;
-  --cor-10: #D4AF37;
+  --cor-10: #D4AF37;  
   --cor-20: #252525;
   --cor-70: #C0C0C0;
   --cor-font-70: #CCCCCC;
@@ -54,23 +54,24 @@ body{
   color: var(--cor-font-70) !important;
   display: block;
   transition: 500ms;
+  width: 300px;
+  text-align: center;
 
 }
-
 .button:hover{
   background-image: linear-gradient(to left, rgba(212, 175, 55, 0.75),  #aa9038,  #967b22, rgba(212, 175, 55, 0.75));
   background-size: 500% 100%;
   animation: degrade-animado 5s infinite alternate;
   transform: scale(1.1);
-
 }
+
 main{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  
 }
 /*.fundo-header{
   position: absolute;
@@ -87,46 +88,66 @@ main{
   mix-blend-mode: lighten;
 }*/
 .headline{
-  padding: 100px 0;
   display: flex;
+  gap: 15px;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-}
-.logo{
-  max-width: 300px;
-  height: auto;
-}
-.logo img{
-  max-width: 100%;
-  height: auto;
+  justify-content: center;
 }
 .headline h1{
-  max-width: 1150px;
-  text-align: center;
   font-family: var(--font-principal);
   font-size: 2.5em;
   color: var(--cor-font-70);
   line-height: 60px;
+  text-align: center;
 }
 .headline p{
+  font-family: var(--font-terce);
   max-width: 750px;
   text-align: center;
-  font-family: var(--font-terce);
   font-size: 1.125em;
   color: var(--cor-font-70);
   line-height: 20px;
 }
 .headline .logo{
-
+  max-width: 150px;
+  height: auto;
+  
 }
+.headline .logo img{
+  max-width: 100%;
+  height: auto;
+}
+/*
+main button{
+  width: 450px;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--font-secund);
+  background: var(--cor-10);
+  outline: none;
+  border: none;
+  color: var(--cor-font-70);
+  box-shadow: 0px 0px 100px rgba(212, 175, 55, 0.75);
+  font-size: 1.2em;
+  transition: 500ms;
+}
+main button:hover{
+  background-image: linear-gradient(to left, rgba(212, 175, 55, 0.75),  #aa9038,  #967b22, rgba(212, 175, 55, 0.75));
+  background-size: 500% 100%;
+  animation: degrade-animado 5s infinite alternate;
+  transform: scale(1.1);
+}
+ */
 .headline p::before{
   content: '';
   display: block;
+  margin: 0 auto;
   width: 150px;
   height: 4px;
   background: var(--cor-10);
-  margin: 0 auto;
   margin-bottom: 20px;
 }
 /* responsividade */
@@ -139,13 +160,26 @@ main{
   }
   .headline p{
     max-width: 300px;
-    text-align: center;
     font-size: 1em;
   }
 }
+main form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.headline input{
+  width: 450px;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 /* SESSÃO DOS GATILHOS QUE SÃO CARDS DE 3 BENEFÍCIOS */
-.gatilhos{
+.beneficios{
   background: var(--cor-black-two);
   padding: 100px 0;
 }
@@ -252,7 +286,7 @@ main{
   
 }
 /* SESSÃO DA ÁREA DE ESCASSEZ */
-.escassez{
+.about{
   width: 100%;
   padding: 100px 0;
 }
@@ -409,9 +443,9 @@ main{
     transition: 400ms;
   }
 
-  input{
-    display: none;
-  }
+.btn-slide{
+  display: none;
+}
   .slides{
     display: flex;
     width: 500%;
@@ -688,43 +722,53 @@ main{
       margin-bottom: 2rem;
     }
   }
-.services{
+.caracteristicas{
   padding: 100px 0 ;
+}
+.caracteristicas p{
+  font-size: 1.125em;
+  font-family: var(--font-terce);
+  line-height: 24px;
+  text-align: center;
+  color: var(--cor-font-20);
+  max-width: 750px;
+  margin: 20px auto 0 auto;
+
 }
 .conta{
   max-width: 1170px;
   margin: auto;
   
 }
-.services .heading{
+.caracteristicas .heading{
   margin-bottom: 50px;
   width: 100%;
 }
-.services .heading h2{
+.caracteristicas .heading h2{
   text-align: center;
   font-size: 2.5em;
   font-family: var(--font-principal);
   color: var(--cor-font-70);
   margin: 0;
 }
-.services .conte{
+.caracteristicas .conte{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 
 }
-.services .conte .cont-box{
+.caracteristicas .conte .cont-box{
   width: 33.33%;
   padding: 15px;
   transition: 500ms;
 }
-.services .conte .cont-box .inner{
+.caracteristicas .conte .cont-box .inner{
   padding: 30px;
   text-align: center;  
   position: relative;
 }
 
-.services .conte .cont-box .inner::before{
+.caracteristicas .conte .cont-box .inner::before{
   content: '';
   position: absolute;
   left: 0;
@@ -737,7 +781,7 @@ main{
   transition: all .8s ease ;
   animation: our-services 5s infinite alternate;
 }
-.services .conte .cont-box .inner::after{
+.caracteristicas .conte .cont-box .inner::after{
   content: '';
   position: absolute;
   right: 0;
@@ -751,13 +795,13 @@ main{
   animation: our-services 5s infinite alternate;
 }
  /*
-.services .conte .cont-box:hover .inner::after{
+.caracteristicas .conte .cont-box:hover .inner::after{
   border-color: var(--cor-10);
   width: 100%;
   height: 100%;
 
 }
-.services .conte .cont-box:hover .inner::before{
+.caracteristicas .conte .cont-box:hover .inner::before{
   border-color: var(--cor-10);
   width: 100%;
   height: 100%;
@@ -778,24 +822,24 @@ main{
     
   }
 }
-.services .conte .cont-box:hover{
+.caracteristicas .conte .cont-box:hover{
   transform: translateY(-20px);
   transition: 500ms;
 
 }
 
 
-.services .conte .cont-box .inner lord-icon{
+.caracteristicas .conte .cont-box .inner lord-icon{
   
 }
-.services .conte .cont-box .inner  h3{
+.caracteristicas .conte .cont-box .inner  h3{
   font-size: 1.5em;
   font-family: var(--font-secund);
   font-weight: normal;
   color: var(--cor-font-70);
   margin: 20px 0;
 }
-.services .conte .cont-box .inner p{
+.caracteristicas .conte .cont-box .inner p{
   font-size: 1.125em;
   font-family: var(--font-terce);
   color: var(--cor-font-20);
@@ -803,11 +847,11 @@ main{
 
 }
 @media(max-width: 789px){
-  .services .conte .cont-box{
+  .caracteristicas .conte .cont-box{
     width: 80%;
     margin: 0 auto;
   }
-  .services .heading h2{
+  .caracteristicas .heading h2{
     max-width: 300px;
     text-align: center;
     margin: 0 auto;
