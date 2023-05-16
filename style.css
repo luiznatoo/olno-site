@@ -723,7 +723,7 @@ main form{
     }
   }
 .caracteristicas{
-  padding: 100px 0 ;
+  padding: 0 0 100px 0 ;
 }
 .caracteristicas p{
   font-size: 1.125em;
