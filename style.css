@@ -22,9 +22,7 @@
   --cor-black-four: #191919;
 }
 body{
- background-image: linear-gradient(to left, #000000,  #262626,  #1c1c1c, #252525, #000000);
- background-size: 500% 100%;
- animation: degrade-animado 5s infinite alternate;
+background-color: var(--cor-20);
 }
 @keyframes degrade-animado{
   0%{
